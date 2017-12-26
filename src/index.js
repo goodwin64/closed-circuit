@@ -1,6 +1,6 @@
 module.exports = function isCircuitClosed(matrix) {
-    for (let i = 1; i < matrix.length - 1; i++) {
-        for (let j = 1; j < matrix[i].length - 1; j++) {
+    for (var i = 1; i < matrix.length - 1; i++) {
+        for (var j = 1; j < matrix[i].length - 1; j++) {
             if (isClosedAround(i, j, matrix)) {
                 return true;
             }
@@ -14,6 +14,6 @@ function isClosedAround(i, j, matrix) {
         matrix[i - 1][j] &&
         matrix[i + 1][j] &&
         matrix[i][j - 1] &&
-        matrix[i][j + 1],
+        matrix[i][j + 1]
     );
 }
